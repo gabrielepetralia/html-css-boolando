@@ -20,8 +20,7 @@ body{
 }
 
 /* HEADER */
-
-header{
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,22 +31,22 @@ header{
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 
-header nav .container{
+header nav .container, footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header nav ul{
+header nav ul, footer ul {
   display: flex;
   list-style: none;
 }
 
-header nav ul li{
+header nav ul li {
   padding: 0 5px;
 }
 
-header nav ul li a{
+header nav ul li a, footer ul li a {
   color: white;
   font-size: 1.1em;
   font-weight: bold;
@@ -59,15 +58,11 @@ header nav ul.categories li a:hover {
 }
 
 /* MAIN */
-main{
-  margin-top: 72px;
-}
-
 main .container {
-  padding: 60px 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 132px;
 }
 
 .card {
@@ -106,6 +101,7 @@ main .container {
   position: absolute;
   top: 10px;
   right: 0;
+  color: #1a1a1a;
   background-color: white;
   padding: 13px;
 }
@@ -160,4 +156,49 @@ main .container {
   text-decoration: line-through;
   color: black;
   font-weight: normal;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 25px 0;
+}
+
+footer span {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* FOOTER LEFT */
+footer .footer-left span {
+  font-size: 1.1em;
+}
+
+footer .footer-left ul li {
+  padding-right: 10px;
+}
+
+footer .footer-left ul li a {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+footer .footer-left ul li a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER RIGHT */
+footer .footer-right span {
+  font-size: 0.9em;
+  padding-left: 14px;
+}
+
+footer .footer-right ul li {
+  padding-left: 10px;
+}
+
+footer .footer-right ul li a {
+  font-size: 1.3em;
 }
