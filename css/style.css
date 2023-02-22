@@ -6,12 +6,12 @@
 }
 
 body{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
   width: 90%;
-  max-width: 1400px;
+  max-width: 1380px;
   margin: 0 auto;
 }
 
@@ -22,6 +22,11 @@ body{
 /* HEADER */
 
 header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background-color: #ff6900;
   padding: 19px 0;
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
@@ -51,4 +56,108 @@ header nav ul li a{
 
 header nav ul.categories li a:hover {
   text-decoration: underline;
+}
+
+/* MAIN */
+main{
+  margin-top: 72px;
+}
+
+main .container {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 32%;
+  min-width: 230px;
+  margin-bottom: 60px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+/* CARD IMAGE */
+.card .image {
+  position: relative;
+  width: 100%;
+}
+
+.card .image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card .image img:last-of-type {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card:hover .image img:last-of-type {
+  display: block;
+}
+
+.card .image .heart {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-color: white;
+  padding: 13px;
+}
+
+.card .image .heart:hover {
+  color: #ff6900;
+  cursor: pointer;
+}
+
+.card .image .tags {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.card .image .tags .tag{
+  padding: 5px 10px;
+}
+
+.card .image .tags .tag.tag-discount {
+  background-color: #ff6900;
+}
+
+.card .image .tags .tag.tag-sustainability {
+  background-color: rgb(56, 155, 56);
+}
+
+
+/* CARD DESCRIPTION */
+.card .item-description .brand {
+  font-size: 0.9em;
+  text-transform: capitalize;
+}
+
+.card .item-description .item-name {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.card .item-description .price {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: rgb(231, 63, 63);
+}
+
+.card .item-description .price.original-price {
+  text-decoration: line-through;
+  color: black;
+  font-weight: normal;
 }
